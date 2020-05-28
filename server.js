@@ -16,7 +16,7 @@ app.use(express.static('public'))
 
 mongodb.connect(process.env.CONNECTIONSTRING, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, client) {
     db = client.db()
-    app.listen(port)
+    app.listen(process.env.PORT)
 })
 
 app.use(express.json())
